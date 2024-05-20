@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <link rel = "stylesheet" href="css/style.css"> 
+        <title> Mẫu thiệp cưới </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <img src="images/logo/h1.jpg" alt="Logo" width="80" height="80">
+                <a class="navbar-brand" href="#!">The Thury Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown mt-3 mt-lg-0">
+                            <a class="nav-link dropdown-toggle btn btn-primary" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sản phẩm
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Cổ điển</a></li>
+                                <li><a class="dropdown-item" href="#">Độc đáo</a></li>
+                                <li><a class="dropdown-item" href="#">Hiện đại</a></li>
+                                <li><a class="dropdown-item" href="#">Họa tiết</a></li>
+                                <li><a class="dropdown-item" href="#">Nhẹ nhàng</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light ms-2" onclick="document.getElementById('demo1').style.display='block'">Đăng kí</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light ms-2" onclick="document.getElementById('demo').style.display='block'">Đăng nhập</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <!-- Biểu mẫu đang nhâp-->
+    <div class="modal" id="demo">
+       <form action="action_page.php" method="post" class="modal-content">
+            <div class="imgcotainer">
+                <span onclick="document.getElementById('demo').style.display='none'" class="close" title="Close Modal">&times;</span>  <!--tao dấu x đóng form-->
+                <img src="images/logo/h2.jpg" alt="Avatar" class="Avatar" width="250px" height="300px" style="margin: 0 auto 0 auto; display: block;">
+            </div>
+
+            <div class="container" style="padding: 16px;">
+                <label for="name" ><b>Username</b></label>
+                <input type ="text" placeholder="Enter Username" name="name" required>
+
+                <label for="pass "><b>Passwword</b></label>
+                <input type ="password" placeholder ="Enter password" name="pass">
+
+                <button type="submit">Login</button>
+                <label for ="text"><b>Remaber me</b>
+                    <input type="checkbox" checked="checked" name="text">
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <pan class="pass"><a href="#!"> Quên mật khẩu</a></pan>
+
+            </div>
+
+       </form>
+    </div>
+    <script>
+        var modal = document.getElementById('demo');
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+       <!-- bieu mau dang ki -->
+       <div class="modal" id="demo1">
+            <form action="action_page.php" method="post" class="modal-content">
+                <div class="container" style="padding: 16px;">
+                    <span onclick="document.getElementById('demo1').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <h2><b>Đăng kí</b></h2>
+                    <p><i>Hãy điền các thông tin bên dưới</i></p>
+                    <hr>
+                    <label for="name" >Username</label>
+                    <input type="text" placeholder="Enter Username" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter email" name="email" >
+                    
+
+                    <label for="pass">Passwword</label>
+                    <input type="password" placeholder="Enter password" name="pass" required>
+
+                    <label for="pass-repeat"> Repeat Passwword</label>
+                    <input type="password" placeholder="Enter password" name="pass-repeat" required>
+
+                    <label for ="text"><b>Remaber me</b>
+                        <input type="checkbox" checked="checked" name="text">
+                    </label>
+
+                </div>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById(demo1).style.display='none'" class="canel">Cancel</button>
+                    <button type="submit" class="signup"> Sign up</button>
+                </div>
+
+            </form>
+       </div>
+
+       <script>
+        var modal = document.getElementById('demo1');
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        </script>
+
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container-fluid p-5 my-5 border ">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/bangchuyen/h4.jpg" alt="Los Angeles" class="d-block" >
+                    <div class="carousel-caption">
+                    <h1 class="caption">Wecome The Thurny Store</h1>
+                    <h3 class="caption">Mang đến cho bạn những lựa chọn tuyệt vời!</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bangchuyen/h5.jpg" alt="Chicago" class="d-block" >
+                    <div class="carousel-caption">
+                    <h1 class="caption">Wecome The Thurny Store</h1>
+                    <h3 class="caption">Đồng hành cùng bạn trong ngày trọng đại</h3>
+                    </div> 
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bangchuyen/h6.jpg" alt="New York" class="d-block" >
+                    <div class="carousel-caption">
+                    <h1 class="caption">Wecome The Thurny Store</h1>
+                    <h3 class="caption">Thay bạn gắn kết yêu thương</h3>
+                    </div>  
+                </div>
+                </div>
+                
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            </div>
+
+         </header>
+        
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="images/codien/h6.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title">Thiệp cưới truyền thống</h2>
+                            <p class="card-text">Tam Sơn Thủy Ba mẫu thiệp cưới họa tiết hoa văn truyền thống từ thời Nhà Nguyễn, mang ý nghĩa lời chúc Phát Triển Mạnh mẽ & Thịnh Vượng.</p>
+                            <button onclick="document.getElementById('demo2').style.display='block'" style="width: auto;">Xem chi tiêt</button>
+                        </div>
+                    </div>
+                </div>
+                
+                    <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ <!-- Section1-->
+ <!--co dien-->
+                <h2 class="chu">CỔ ĐIỂN</h2>
+               <section class="py-5">
+                <div class="container px-4 px-lg-5 mt-5">
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="images/codien/h1.jpg" alt="..." id="rong"  />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">Thiệp Cưới hoa mẫu đơn tông đỏ</h5>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="images/codien/h2.jpg" alt="..." id="rong" />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">Thiệp cưới đỏ truyền thống</h5>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="images/codien/h3.jpg" alt="..." id="rong" />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">Thiệp cưới đỏ truyền thuống phá cách </h5>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                <img class="card-img-top" src="images/codien/h4.jpg" alt="..." id="rong" />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">Thiệp cưới sắc xanh lá cây </h5>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </section>
+
+
+
+<!-- Section2-->
+ <!--doc dao-->
+ <h2 class="chu"><b>ĐỘC ĐÁO</b></h2>
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/docdao/h1.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp Cưới Acrylic sang trọng</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/docdao/h2.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cưới màu nước tông be</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/docdao/h3.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cưới hoa vẻ dịu dàng sang trọng</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/docdao/h4.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder"> Thiệp cưới hoa cúc  </h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+
+<!-- Section3-->
+ <!--Hiện đại-->
+ <h2 class="chu"><b>HIỆN ĐẠI</b></h2>
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hiendai/h1.jpg" alt="..." id="rong" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp Cưới Đỏ Hoa Văn Baroque Họa Tiết Hoa Tinh Tế</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hiendai/h2.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cới đỏ hoa hồng</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hiendai/h3.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cưới màu nước tông xanh lá cây </h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hiendai/h4.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">  Thiệp cưới mở ba hiện đại </h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+
+<!-- Section4-->
+ <!--Hoa tiet-->
+ <h2 class="chu"><b>HỌA TIẾT</b></h2>
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hoatiet/h1.jpg" alt="..." id="rong" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">hiệp Cưới họa tiết sắc hoa</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hoatiet/h3.jpg" alt="..." id="rong" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cưới họa tiết gợn sóng</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hoatiet/h2.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder"> Thiệp cưới họa tiết cung điện  </h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/hoatiet/h4.jpg" alt="..."  id="rong" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder"> Thiệp cưới họa tiết hoa cỏ </h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+
+<!-- Section5-->
+ <!--Nhe nhang-->
+ <h2 class="chu"><b>NHẸ NHÀNG</b></h2>
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/nhenhang/h1.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp Cưới nâu màu nước điểm vàng</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/nhenhang/h2.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cưới minimalist</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/nhenhang/h3.jpg" alt="..." id="rong" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder"> Thiệp cưới vintage</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="images/nhenhang/h4.jpg" alt="..." id="rong"  />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Thiệp cưới Baroque   </h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+   
+
+   <!--phan trang-->
+   <div class="container mt-3" >       
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+<footer>
+    <ul>
+        <li>Hotline: 0357689822</li>
+        <li><a href="https://www.facebook.com/nhutthuy.to/"><img src="images/logo/fb.png" alt="" width="40px" height="40px"></a></li>
+        <li><img src="images/logo/zalo1.png" width="40px" height="40px"></li>
+    </ul>
+</footer>
+
+
+         <!--xem chi tiet1-->
+         <div class="modal" id="demo2">
+            <form class="modal-content1" action="action_page.php" method="post">
+                <span onclick="document.getElementById('demo2').style.display='none'" class="close" title="close Modal">&times;</span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <h2>Thông tin chi tiết của sản phẩm</h2>
+                                <a href="#!"><img class="card-img-top" src="images/codien/h6.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title">Thiệp cưới truyền thống</h2>
+                                </div>
+                            </div>
+                        </div>
+                  
+
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header"><b>Thiệp cưới truyền thống</b></div>
+                                <div class="card-body">Tam Sơn Thủy Ba mẫu thiệp cưới họa tiết hoa văn truyền thống từ thời Nhà Nguyễn, mang ý nghĩa lời chúc Phát Triển Mạnh mẽ & Thịnh Vượng.
+                                    <br>Chất liệu : Giấy cao cấp
+                                    <br>Tone: Màu đỏ
+                                    <br> Giá: 6.500đ
+                                </div>
+                            </div>
+
+                        <div class="card mb-6">
+                                <div class="input-group">
+                                    <button class="btn btn-primary" id="button-search" type="button">Đặt hàng</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+           </div>
+
+           <script>
+            var modal = document.getElementById('demo2');
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+            </script>
+
+
+            
+    </body>
+</html>
+
+
+            
